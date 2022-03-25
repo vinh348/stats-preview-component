@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --imgAccent: hsla(277, 64%, 61%, 0.5);
+    --mainHeading-white: hsl(0, 0%, 100%);
+    --mainParagraph-white: hsla(0, 0%, 100%, 0.75);
+    --statsWhite: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--main-background);
+    color: #fff;
+}
+
+
+
+.card-content {
+    background-color: var(--card-background);
+    width: 80%;
+    max-width: 375px;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.img-container .img {
+
+    /* position: relative; */
+    background: url("images/image-header-desktop.jpg") center/cover no-repeat;
+    width: 100%;
+    height: 300px;
+}
+
+.img-container .img .overlay {
+    background-color: hsla(277, 74%, 53%, 0.5);
+    height: 300px;
+}
+
+.heading-container {
+    padding: 4rem 2rem;
+    text-align: center;
+
+}
+
+.main-heading-block h1 {
+    margin-bottom: 1em;
+    color: var(--mainHeading-white);
+}
+
+.heading-paragraph {
+    font-size: 11px;
+    color: var(--mainParagraph-white);
+    margin-top: 3em;
+}
+
+.stats-container {
+    margin-top: 4em;
+}
+
+.stat {
+    margin-bottom: 3em;
+}
+
+.main-heading-block span {
+    color: var(--imgAccent);
+}
+
+.stat p {
+    color: var(--statsWhite);
+    font-size: 7px;
+    text-transform: uppercase;
+}
+
+.credits {
+    text-align: center;
+    margin: 1rem;
+    opacity: 0.7;
+}
+
+.credits a {
+    color: hsl(241, 75%, 61%);
+}
+
+@media (min-width: 775px) {
+    .card-content {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 987px;
+        height: 350px;
+        margin: 8rem auto;
+    }
+
+    .img-container .img {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .img-container {
+        order: 1;
+    }
+
+    .img-container .img .overlay {
+        width: 100%;
+        height: 100%;
+    }
+
+    .stats-container {
+        display: flex;
+        gap: 4rem;
+        margin-top: 4rem;
+    }
+
+    .main-heading-block {
+        width: 80%;
+        text-align: left;
+    }
+
+    .heading-paragraph {
+        margin-top: 3em;
+    }
+
+
+}
+
+;
